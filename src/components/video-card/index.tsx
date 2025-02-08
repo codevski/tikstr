@@ -23,9 +23,11 @@ interface Note {
   hashtags: string[];
   npub: string;
   profile: NDKUserProfile | null;
+  likes: number;
 }
 
-const NoteMain = ({ note }: Notes) => {
+const VideoCard = ({ note }: Notes) => {
+  // Auto play video when in view
   useEffect(() => {
     const video = document.getElementById(
       `video-${note?.id}`,
@@ -45,7 +47,7 @@ const NoteMain = ({ note }: Notes) => {
       );
       observer.observe(noteMainElement);
     }
-  }, []);
+  });
 
   return (
     <div id={`NoteMain-${note?.id}`} className="flex border-b py-6">
@@ -104,10 +106,9 @@ const NoteMain = ({ note }: Notes) => {
 
           <PostMainLikes post={note} />
         </div>
-        {/* <UserPosts pubkey={userPubkey} /> */}
       </div>
     </div>
   );
 };
 
-export default NoteMain;
+export default VideoCard;
