@@ -31,7 +31,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
               )}
             </button>
             <span className="text-xs text-gray-800 font-semibold dark:text-gray-100">
-              3
+              {post.likes}
             </span>
           </div>
 
