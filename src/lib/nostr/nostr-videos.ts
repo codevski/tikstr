@@ -41,22 +41,22 @@ interface VideoPost {
 
 const getVideoLikes = async (videoEventId: string, pubkey: string) => {
   const ndk = await getNDK();
-  const relay = await Relay.connect("wss://relay.j35tr.com");
-  console.log(`connected to ${relay.url}`);
+  // const relay = await Relay.connect("wss://relay.j35tr.com");
+  // console.log(`connected to ${relay.url}`);
 
-  relay.subscribe(
-    [
-      {
-        kinds: [NDKKind.Reaction],
-        "#e": [videoEventId],
-      },
-    ],
-    {
-      onevent(event) {
-        console.log(`got event id: ${videoEventId} :`, event);
-      },
-    },
-  );
+  // relay.subscribe(
+  //   [
+  //     {
+  //       kinds: [NDKKind.Reaction],
+  //       "#e": [videoEventId],
+  //     },
+  //   ],
+  //   {
+  //     onevent(event) {
+  //       console.log(`got event id: ${videoEventId} :`, event);
+  //     },
+  //   },
+  // );
 
   // let eventss = await pool.querySync(relays, { kinds: [0, 1] });
 
