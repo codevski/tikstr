@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import PostMainLikes from "./submenu";
 import Image from "next/image";
 import { NDKUserProfile } from "@nostr-dev-kit/ndk";
+import { NostrImage } from "../image";
 
 interface Notes {
   note: Note;
@@ -52,12 +53,12 @@ const VideoCard = ({ note }: Notes) => {
   return (
     <div id={`NoteMain-${note?.id}`} className="flex border-b py-6">
       <div className="cursor-pointer">
-        <Image
-          alt="profile"
+        <NostrImage
           className="rounded-full max-h-[60px]"
-          width="60"
-          height="60"
-          src={"https://placehold.co/60.png"}
+          alt="profile"
+          width={60}
+          height={60}
+          nostrUrl={note.profile?.image || "https://placehold.co/60.png"}
         />
       </div>
 
