@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+<img src="docs/repo/tikstr.png" alt="TikStr Logo" />  
+</div>
+<!-- <h1 align="center">TikStr</h1> -->
 
-## Getting Started
+<div align="center">
+<strong>Short-form video, infinite possibilities.</strong>
+</div>
+<div align="center">
+  where <code>creators</code> thrive.
+</div>
+<br />
 
-First, run the development server:
+<div align="center">
+  <!-- Node version -->
+  <a href="#">
+    <img src="https://img.shields.io/node/v/next"
+      alt="NPM version" />
+  </a>
+  <!-- Netlify Status -->
+  <a href="https://github.com/codevski/tikstr/actions/workflows/pages-deployment.yaml">
+    <img src="https://github.com/codevski/tikstr/actions/workflows/pages-deployment.yaml/badge.svg?branch=master"
+      alt="Deploy Status" />
+  </a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  <!-- Chat Status -->
+  <a href="#">
+    <img src="https://img.shields.io/discord/426035845531959297"
+      alt="Chat Status" />
+  </a>
+
+</div>
+<div align="center">
+  <!-- Android -->
+  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
+  <!-- Web -->
+  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+</div>
+
+<div align="center">
+  <sub>The little project that could. Built with ❤︎ by
+  <a href="nostr:npub1p7sg9q6t9xttrhvuumknczl88veqtgl2ktgf06ygdsmaua2p3n2slw25qk">codevski</a> and
+  <a href="#">
+    contributors
+  </a>
+</div>
+
+### Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [🚀 Getting Started](#-getting-started)
+
+## Overview
+
+TikStr is a decentralized short-form video platform built on the Nostr protocol, combining the engaging format of traditional video platforms with the freedom and privacy of decentralized architecture.
+
+## Features
+
+**Currently working on features for the MVP release:**
+
+- ⚡ Send and receive zaps for content you love
+- 🎥 Share short-form video content to the Nostr network
+- 👤 Connect with your existing Nostr identity
+- 🔗 Cross-post support for Nostr notes
+
+**Coming Soon**
+
+- 🔍 Discovery feed based on your Nostr follows
+- 💬 Reply to videos with text or video responses
+- 📱 Mobile App
+- 🏷️ Hashtag support for content discovery
+- ✂️ Basic video editing tools
+
+## 🚀 Getting Started
+
+Get started with TikStr development in just a few steps:
+
 ```
+git clone https://github.com/codevski/tikstr.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+cd tikstr
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bun install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+bun run dev
+```
