@@ -7,7 +7,7 @@ import NDK, {
 import { getNDK } from "./nostr";
 import { getHexPubkey, isValidVideo } from "../utils";
 import { fetchUser, fetchUserProfile } from "./nostr-user";
-import { Relay } from "nostr-tools/relay";
+// import { Relay } from "nostr-tools/relay";
 
 interface VideoPost {
   id: string;
@@ -118,15 +118,18 @@ const parseEvent = async (ndk: NDK, event: NDKEvent) => {
 };
 
 export const getVideoFeed = async (limit: number = 5) => {
+  console.log("GETTING VIDEO");
   const ndk = await getNDK();
 
   const filter: NDKFilter = {
     kinds: [34235], // NIP-71 video event kind
     limit: limit,
-    since: Math.floor(Date.now() / 1000) - 7 * 24 * 60 * 60, // Last 7 days
+    // since: Math.floor(Date.now() / 1000) - 7 * 24 * 60 * 60, // Last 7 days
   };
 
   try {
+    console.log("GETTING VIDEO EVENTS");
+
     const events = await ndk.fetchEvents(filter);
     console.log("Events: ", events);
 
