@@ -1,3 +1,4 @@
+import BottomBar from "@/components/bottom-bar";
 import SideNav from "@/components/global/sidenav";
 import TopNav from "@/components/global/topnav";
 import React from "react";
@@ -14,6 +15,7 @@ const layout = ({ children }: Props) => {
         <SideNav />
         {children}
       </div>
+      <BottomBar />
     </div>
   );
 };
