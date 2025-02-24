@@ -13,7 +13,9 @@ interface Props {
 
 const EditProfile = ({ setEdit }: Props) => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [file, setFile] = useState<File | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isUpdating, setIsUpdating] = useState(false);
   const getUploadedImage = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = event.target.files && event.target.files[0];

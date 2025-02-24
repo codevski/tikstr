@@ -1,5 +1,5 @@
 // lib/nostr-debug.ts
-import { NDKFilter } from "@nostr-dev-kit/ndk";
+import { NDKEvent, NDKFilter } from "@nostr-dev-kit/ndk";
 import { getNDK } from "./nostr";
 import { getHexPubkey } from "../utils";
 
@@ -23,13 +23,13 @@ export async function getAllUserEvents(pubkey: string) {
     const eventsByKind = sortedEvents.reduce(
       (acc, event) => {
         const kind = event.kind;
-        if (!acc[kind]) {
-          acc[kind] = [];
+        if (!acc[kind as number]) {
+          acc[kind as number] = [];
         }
-        acc[kind].push(event);
+        acc[kind as number].push(event);
         return acc;
       },
-      {} as Record<number, any[]>,
+      {} as Record<number, NDKEvent[]>,
     );
 
     // Print summary
