@@ -39,6 +39,7 @@ interface VideoPost {
 //   return comments.size;
 // };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const getVideoLikes = async (videoEventId: string, pubkey: string) => {
   const ndk = await getNDK();
   // const relay = await Relay.connect("wss://relay.j35tr.com");

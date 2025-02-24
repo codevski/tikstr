@@ -8,6 +8,7 @@ interface PostWithProfile {
   id: string;
   created_at: number;
   profile: NDKUserProfile | null;
+  likes: number;
 }
 interface PostMainLikesCompTypes {
   post: PostWithProfile;

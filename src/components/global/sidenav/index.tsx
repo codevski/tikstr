@@ -11,7 +11,7 @@ import {
 
 const SideNav = () => {
   return (
-    <div className="fixed z-20  pt-[70px] h-full w-[70px] lg:border-r-0 border-r lg:w-[310px] overflow-auto">
+    <div className="fixed  pt-[70px] h-full w-[70px] lg:border-r-0 border-r lg:w-[310px] overflow-auto">
       <div className="lg:w-full w-[55px] mx-auto">
         <Link href="/">
           <MenuItem icon="For You" size="25px" />

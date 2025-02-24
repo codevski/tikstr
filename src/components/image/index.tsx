@@ -5,8 +5,8 @@ import Image from "next/image";
 interface NostrImageProps {
   nostrUrl: string;
   alt: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   className?: string;
 }
 
